@@ -192,6 +192,52 @@
                   }
               };
           }
+      ])
+      
+      .directive('vkLike', [
+          '$window', '$rootScope', function ($window, $rootScope) {
+              return {
+                  restrict: 'A',
+                  scope: {
+                      vkTitle: '=',
+                      vkUrl: '=',
+                      vkImage: '=',
+                  },
+                  link: function (scope, element, attrs) {
+                      if (!$window.VK) {
+                          // Load VK API if not already loaded
+                          $.getScript('//vk.com/js/api/openapi.js?105', function () {
+                              $window VK.init({
+                                    apiId: $rootScope.vkontakteAppId,
+                                    onlyWidgets: true
+                                });
+                              renderVkButton();
+                          });
+                      } else {
+                          renderVkButton();
+                      }
+
+                      var watchAdded = false;
+                      function renderVkButton() {
+                          if (!scope.vkLike && !watchAdded) {
+                              // wait for data if it hasn't loaded yet
+                              watchAdded = true;
+                              var unbindWatch = scope.$watch('vkLike', function (newValue, oldValue) {
+                                  if (newValue) {
+                                      renderLikeButton();
+                                      
+                                      // only need to run once
+                                      unbindWatch();
+                                  }
+                              });
+                              return;
+                          } else {
+                              element.html('<div id="vk_like"></div>');
+                              VK.Widgets.Like('vk_like');
+                          }
+                  }
+              };
+          }
       ]);
 
 })();
