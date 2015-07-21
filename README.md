@@ -77,3 +77,17 @@ To use a custom URL for the pinterest button:
 ```html
 <div pin-it="myModel.Name" pin-it-image="myModel.ImageUrl" pin-it-url="myModel.Url"></div>
 ```
+
+####Vkontakte
+
+Create an empty div with the *vk-title*, *vk-image*, *vk-description* and *vk-url* attributes
+
+```html
+<div vk-title="myModel.Name" vk-image="myModel.ImageUrl"></div>
+```
+
+To use a custom URL for the pinterest button:
+
+```html
+<div vk-title="myModel.Name" vk-image="myModel.ImageUrl" vk-url="myModel.Url" vk-description="myModel.Description"></div>
+```
