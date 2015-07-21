@@ -86,7 +86,7 @@ Create an empty div with the *vk-title*, *vk-image*, *vk-description* and *vk-ur
 <div vk-title="myModel.Name" vk-image="myModel.ImageUrl"></div>
 ```
 
-To use a custom URL for the pinterest button:
+To use a custom URL for the vk button:
 
 ```html
 <div vk-title="myModel.Name" vk-image="myModel.ImageUrl" vk-url="myModel.Url" vk-description="myModel.Description"></div>
