@@ -1,20 +1,20 @@
 {
-  "name": "angulike",
+  "name": "ishapkin/angulike",
   "version": "1.2.0",
   "authors": [
-    "Jason Watmore <jason@pointblankdevelopment.com.au> (http://jasonwatmore.com)"
+    "Shapkin Ilya <info@shapkin.org> (http://shapkin.org)"
   ],
-  "description": "AngularJS directives for social sharing buttons - Facebook Like, Google+, Twitter and Pinterest",
+  "description": "AngularJS directives for social sharing buttons - Facebook Like, Google+, Twitter, Pinterest and Vkontakte",
   "main": "angulike.js",
   "keywords": [
     "AngularJS",
     "Facebook",
     "Twitter",
     "Google+",
-    "Pinterest"
+    "Pinterest",
+    "Vkontakte"
   ],
   "license": "MIT",
-  "homepage": "http://jasonwatmore.com/post/2014/08/01/AngularJS-directives-for-social-sharing-buttons-Facebook-Like-GooglePlus-Twitter-and-Pinterest.aspx",
   "ignore": [
     "**/.*",
     "node_modules",
