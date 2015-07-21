@@ -4,6 +4,7 @@
   "authors": [
     "Shapkin Ilya <info@shapkin.org> (http://shapkin.org)"
   ],
+  "homepage": "https://github.com/ishapkin/ishapkin-angulike",
   "description": "AngularJS directives for social sharing buttons - Facebook Like, Google+, Twitter, Pinterest and Vkontakte",
   "main": "angulike.js",
   "keywords": [
