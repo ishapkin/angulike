@@ -205,18 +205,14 @@
                         vkDescription: '=',
                     },
                     link: function (scope, element, attrs) {
-                        if (!$window.VK) {
-                            // Load VK API if not already loaded
-                            $.getScript('//vk.com/js/api/openapi.js?105', function () {
-                                $window.VK.init({
-                                    apiId: $rootScope.vkontakteAppId,
-                                    onlyWidgets: true
-                                });
-                                renderVkButton();
+                        // Load VK API if not already loaded
+                        $.getScript('//vk.com/js/api/openapi.js?105', function () {
+                            $window.VK.init({
+                                apiId: $rootScope.vkontakteAppId,
+                                onlyWidgets: true
                             });
-                        } else {
                             renderVkButton();
-                        }
+                        });
 
                         var watchAdded = false;
                         function renderVkButton() {
@@ -233,13 +229,12 @@
                                 return;
                             } else {
                                 element.html('<span id="vk_like"></span>');
-                                console.log(scope.vkTitle);
                                 $window.VK.Widgets.Like('vk_like', {
                                     pageTitle: scope.vkTitle,
                                     pageDescription: scope.vkDescription,
                                     pageImage: scope.vkImage,
                                     pageUrl: scope.vkUrl,
-                                    type: 'button',
+                                    type: 'button'
                                 });
                             }
                         }
