@@ -80,8 +80,9 @@ To use a custom URL for the pinterest button:
 
 ####Vkontakte
 
-Create an empty div with the *vk-title*, *vk-image*, *vk-description* and *vk-url* attributes
+Create an empty div with the *vk-title*, *vk-image*, *vk-description* and *vk-url* attributes.
 
+Before usage set $rootScope.vkontakteAppId = [YOUR VK APP ID]
 ```html
 <div vk-title="myModel.Name" vk-image="myModel.ImageUrl"></div>
 ```
