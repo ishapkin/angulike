@@ -9,7 +9,7 @@ To see a demo and further details go to http://jasonwatmore.com/post/2014/08/01/
 
 ###Installation
 
-Install using bower: `bower install angulike`
+Install using bower: `bower install ishapkin-angulike`
 
 Alternatively download the code and include the angulike.js file in your page.
 
